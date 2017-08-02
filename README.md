@@ -7,7 +7,9 @@ It also uses AndroidInjector(Dagger2) and MVP(basically it's not full MVP it is 
 
 You need to move folder BaseArch into your_android_studio_install_folder/plugins/android/lib/templates/activities
 
-Then restart AndroidStudio (if it was launched) and create new project using BaseArch
+Then restart AndroidStudio (if it was launched) and create new project using BaseArch.
+
+Activity and Fragment creation process should be using NewActivity and NewFragment.
 
 ## Known issue
 
