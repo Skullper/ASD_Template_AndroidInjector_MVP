@@ -9,4 +9,8 @@ You need to move folder BaseArch into your_android_studio_install_folder/plugins
 
 Then restart AndroidStudio (if it was launched) and create new project using BaseArch
 
+##Known issue
+
+You can find it here https://riggaroo.co.za/custom-file-template-group-android-studiointellij/
+
 ## GL HF
