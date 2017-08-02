@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="2"
+    name="Base Arch"
+    minApi="16"
+    minBuildApi="16"
+    description="Creates a new MVP base activity.">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+    		id="classApplication"
+    		name="Class extends Application"
+    		type="string"
+    		constraints="nonempty|class"
+    		default="App"
+    		help="The name of class that extends from Application" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="BaseActivity"
+        help="The name of the base activity class to create" />
+
+    <parameter
+        id="className"
+        name="Fragment Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="BaseFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="viewName"
+        name="View Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="BaseView"
+        visibility="true"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}View"
+        help="The name of the View interface to create" />
+
+    <parameter
+        id="presenterName"
+        name="Presenter Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="BasePresenter"
+        visibility="true"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Presenter"
+        help="The name of the Presenter interface to create" />
+
+	<parameter
+    		id="isSupportLibUsing"
+    		name="Is support libraries used?"
+    		type="boolean"
+    		default="false"
+    		help="If you're using support libs(e.g. android.support.v4.app.Fragment)"/>
+
+  <parameter
+      id="packageName"
+      name="Package name"
+      type="string"
+      constraints="package"
+      default="com.a2.lab" />
+
+  <!-- 128x128 thumbnails relative to template.xml -->
+  <thumbs>
+      <!-- default thumbnail is required -->
+      <thumb>template_blank_activity.png</thumb>
+  </thumbs>
+
+  <globals file="globals.xml.ftl" />
+  <execute file="recipe.xml.ftl" />
+
+</template>
