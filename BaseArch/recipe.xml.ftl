@@ -36,8 +36,11 @@
                    to="${escapeXmlAttribute(srcOut)}/di/modules/AppModule.java"/>
 
   <instantiate from="root/src/app_package/di/ModuleBuilder.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/di/ModuleBuilder.java"/>\
+                   to="${escapeXmlAttribute(srcOut)}/di/ModuleBuilder.java"/>
 
+  <instantiate from="root/src/app_package/utils/FragmentHelper.java.ftl"
+                   to="${escapeXmlAttribute(srcOut)}/utils/FragmentHelper.java"/>
+                   
   <open file="${escapeXmlAttribute(srcOut)}/base_arch/fragment/${className}.java" />
   <open file="${escapeXmlAttribute(srcOut)}/base_arch/activity/${activityClass}.java" />
   <open file="${escapeXmlAttribute(srcOut)}/base_arch/presentation/presenter/${presenterName}.java" />
