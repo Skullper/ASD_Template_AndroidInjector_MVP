@@ -1,7 +1,7 @@
 ## Android Studio template
 
 This template includes base packages and files for the project.
-It also uses AndroidInjector(Dagger2) and MVP.
+It also uses AndroidInjector(Dagger2) and MVP(basically it's not full MVP it is only View+Presenter).
 
 ## How to use
 
