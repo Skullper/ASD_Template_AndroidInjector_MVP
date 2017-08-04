@@ -1,6 +1,6 @@
 # MVPActivity
 
-Android template activity
+Android template for activity
 
 # How to use
 
